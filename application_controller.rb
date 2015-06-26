@@ -9,13 +9,13 @@ class MyApp < Sinatra::Base
   post '/' do
     ingredient = params["ingredient"]
     grams= params["grams"]
-    if ingredient == "sugar" 
+    if ingredient.downcase == "sugar" 
       @result=convert_sugar(grams)
-    elsif ingredient == "flour" || ingredient== "Flour"
+    elsif ingredient.downcase == "flour" || ingredient== "Flour"
       @result=convert_flour(grams)
-    elsif ingredient== "butter"
+    elsif ingredient.downcase== "butter"
       @result= convert_butter(grams)
-    elsif ingredient=="powdered sugar" || ingredient=="confectioners sugar"
+    elsif ingredient.downcase=="powdered sugar" || ingredient.downcase=="confectioners sugar"
       @result= convert_powdered_sugar(grams)
     else @result="Sorry, that ingredient is not recognized. Please try again."
     end
