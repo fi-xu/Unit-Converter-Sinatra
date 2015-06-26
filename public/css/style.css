@@ -1,5 +1,13 @@
 body{
-  background-color: #ccffff;
+  background-image: url("http://static8.depositphotos.com/1298561/803/v/950/depositphotos_8037109-seamless-cake-pattern.jpg");
   color: #000053;
   text-align: center;
+}
+h1{
+  background-color: #F9E1E1;
+}
+
+form{
+  background-color: #F9E1E1;
+  
 }
